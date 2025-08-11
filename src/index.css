@@ -1,0 +1,131 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    /* Pink-themed color system */
+    --background: 345 100% 98%;
+    --foreground: 340 40% 15%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 340 40% 15%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 340 40% 15%;
+
+    /* Main pink palette */
+    --primary: 332 84% 65%;
+    --primary-foreground: 0 0% 100%;
+    --primary-light: 338 100% 85%;
+    --primary-dark: 328 75% 45%;
+
+    /* Soft pink secondary */
+    --secondary: 345 50% 92%;
+    --secondary-foreground: 340 40% 20%;
+
+    /* Muted tones */
+    --muted: 345 30% 95%;
+    --muted-foreground: 340 20% 55%;
+
+    /* Accent pink */
+    --accent: 320 90% 75%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 345 25% 88%;
+    --input: 345 25% 88%;
+    --ring: 332 84% 65%;
+    
+    /* Custom gradients */
+    --gradient-pink: linear-gradient(135deg, hsl(var(--primary-light)), hsl(var(--primary)));
+    --gradient-hero: linear-gradient(135deg, hsl(345 100% 95%), hsl(340 80% 88%));
+    --gradient-card: linear-gradient(145deg, hsl(0 0% 100%), hsl(345 50% 98%));
+    
+    /* Shadows */
+    --shadow-soft: 0 4px 20px hsl(var(--primary) / 0.1);
+    --shadow-card: 0 8px 32px hsl(var(--primary) / 0.08);
+    --shadow-button: 0 4px 12px hsl(var(--primary) / 0.25);
+
+    --radius: 0.5rem;
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 340 30% 8%;
+    --foreground: 345 50% 92%;
+
+    --card: 340 25% 12%;
+    --card-foreground: 345 50% 92%;
+
+    --popover: 340 25% 12%;
+    --popover-foreground: 345 50% 92%;
+
+    --primary: 332 70% 60%;
+    --primary-foreground: 0 0% 100%;
+    --primary-light: 338 80% 75%;
+    --primary-dark: 328 65% 40%;
+
+    --secondary: 340 20% 18%;
+    --secondary-foreground: 345 30% 85%;
+
+    --muted: 340 15% 15%;
+    --muted-foreground: 340 15% 65%;
+
+    --accent: 320 70% 65%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 62.8% 50%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 340 20% 20%;
+    --input: 340 20% 20%;
+    --ring: 332 70% 60%;
+    
+    --gradient-pink: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-dark)));
+    --gradient-hero: linear-gradient(135deg, hsl(340 30% 12%), hsl(335 25% 15%));
+    --gradient-card: linear-gradient(145deg, hsl(340 25% 12%), hsl(340 20% 18%));
+    --shadow-soft: 0 4px 20px hsl(0 0% 0% / 0.3);
+    --shadow-card: 0 8px 32px hsl(0 0% 0% / 0.4);
+    --shadow-button: 0 4px 12px hsl(var(--primary) / 0.4);
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
